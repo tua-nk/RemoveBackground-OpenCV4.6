@@ -44,7 +44,7 @@ void removeBgr(string image_before, string image_after, double thresh /*= 40*/, 
     Mat src = imread(image_before);
 
     //0. Source Image
-    imshow("src", src);
+    imshow("image_before", src);
 
     //1. Remove Shadows
     //Convert to HSV
