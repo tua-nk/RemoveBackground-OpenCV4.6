@@ -67,7 +67,7 @@ void removeBgr(string image_before, string image_after, double thresh /*= 40*/, 
     GaussianBlur(gray, gray, Size(3, 3), 0, 0, BORDER_DEFAULT);
     //Use Sobel filter and thresholding.
     Mat edges = sobel(gray);
-    threshold(edges, edges, 40, 255, cv::THRESH_BINARY);
+    threshold(edges, edges, thresh, maxval, cv::THRESH_BINARY);
 
     //4. Dilate
     Mat dilateGrad = edges;
